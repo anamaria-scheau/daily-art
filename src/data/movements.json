@@ -29,5 +29,160 @@
         "artistBio": "Jan van Eyck worked in Bruges in the 1400s. He perfected the use of oil paint, making surfaces shine like jewels and details sharp enough to count the hairs on a dog."
       }
     ]
+  },
+  {
+    "id": "italian-renaissance",
+    "order": 2,
+    "name": "Italian Renaissance",
+    "yearRange": "c. 1400–1600",
+    "description": "Italian cities were rich, curious and competitive. Artists studied anatomy, geometry and ancient statues, and learned to paint people who look ready to breathe, blink and speak.",
+    "artworks": [
+      {
+        "id": "mona-lisa",
+        "title": "Mona Lisa",
+        "artist": "Leonardo da Vinci",
+        "year": "c. 1503–1519",
+        "imageKey": "mona-lisa",
+        "imageCredit": "Leonardo da Vinci, public domain, via Wikimedia Commons",
+        "description": "A woman sits calmly, hands folded, with a faint smile that seems to change the longer you look.",
+        "story": "The most famous painting in the world was once just a stolen painting. In 1911 a Louvre worker, Vincenzo Peruggia, hid in the museum, walked out with it under his coat and kept it for two years. The theft made it a global celebrity. Leonardo, meanwhile, never delivered it to the client and carried it with him until the end of his life.",
+        "lookCloser": [
+          "The corners of her mouth and eyes are painted in soft, smoky shadows, with no hard outlines.",
+          "The winding landscape behind her looks slightly different on the left and on the right.",
+          "Her hands are relaxed and layered, a pose that was fresh and modern in her time."
+        ],
+        "details": {
+          "medium": "Oil on poplar panel",
+          "dimensions": "77 × 53 cm",
+          "location": "Louvre Museum, Paris"
+        },
+        "context": "The sitter is usually thought to be Lisa Gherardini, wife of a Florentine silk merchant, which is why the painting is also called La Gioconda. Leonardo used a technique called sfumato, building up extremely thin glazes to melt light into shadow.",
+        "artistBio": "Leonardo da Vinci (1452–1519) was a painter, engineer, anatomist and endless note-taker. His notebooks, written in mirror writing, are full of flying machines and water studies."
+      }
+    ]
+  },
+  {
+    "id": "baroque",
+    "order": 4,
+    "name": "Baroque",
+    "yearRange": "c. 1600–1750",
+    "description": "Baroque art wants to move you. Dramatic light, strong diagonals and caught-in-the-act moments turn paintings into theatre.",
+    "artworks": [
+      {
+        "id": "calling-of-saint-matthew",
+        "title": "The Calling of Saint Matthew",
+        "artist": "Caravaggio",
+        "year": "1599–1600",
+        "imageKey": "calling-of-saint-matthew",
+        "imageCredit": "Caravaggio, public domain, via Wikimedia Commons",
+        "description": "In a dim tavern, a beam of light cuts through the room just as a stranger points at a tax collector.",
+        "story": "Caravaggio painted saints like people from the street, in ordinary clothes, in a dark tavern. That was shocking and thrilling at the same time. The painter was just as dramatic as his canvases: in 1606 he killed a man in a brawl and had to flee Rome for the rest of his short life.",
+        "lookCloser": [
+          "A single beam of light enters from the right and seems to follow the pointing hand.",
+          "The men at the table wear clothes from Caravaggio's own time, not from biblical times.",
+          "Art historians still debate which man at the table is Matthew: the bearded one pointing at himself, or the young man looking down at the coins."
+        ],
+        "details": {
+          "medium": "Oil on canvas",
+          "dimensions": "322 × 340 cm",
+          "location": "Contarelli Chapel, San Luigi dei Francesi, Rome"
+        },
+        "context": "The painting was made for a church chapel in Rome and still hangs there. Caravaggio pushed a style called tenebrism, using deep darkness against bright light to turn a quiet moment into a lightning strike.",
+        "artistBio": "Caravaggio (1571–1610), born Michelangelo Merisi, was a hot-tempered genius who changed painting forever. Many Baroque painters across Europe copied his light."
+      }
+    ]
+  },
+  {
+    "id": "romanticism",
+    "order": 7,
+    "name": "Romanticism",
+    "yearRange": "c. 1800–1850",
+    "description": "Romantic artists traded reason for feeling. Storms, ruins, mountains and solitude became ways to talk about awe, longing and the wild side of the human heart.",
+    "artworks": [
+      {
+        "id": "wanderer-above-the-sea-of-fog",
+        "title": "Wanderer above the Sea of Fog",
+        "artist": "Caspar David Friedrich",
+        "year": "c. 1818",
+        "imageKey": "wanderer-above-the-sea-of-fog",
+        "imageCredit": "Caspar David Friedrich, public domain, via Wikimedia Commons",
+        "description": "A man stands on a rocky peak with his back to us, looking out over a sea of fog.",
+        "story": "This view does not exist. Friedrich built it in his studio from separate sketches of real rocks and mountains, then added the man and the fog. We never see the wanderer's face, so the picture becomes about us: what would you feel standing there? Nobody knows for sure who the man is.",
+        "lookCloser": [
+          "The man is seen from behind, so you stand in his place and share his view.",
+          "The fog blurs the distance, so the world seems to go on forever.",
+          "The rocks in front are sharply painted, while the faraway peaks almost melt into the sky."
+        ],
+        "details": {
+          "medium": "Oil on canvas",
+          "dimensions": "94.8 × 74.8 cm",
+          "location": "Hamburger Kunsthalle, Hamburg"
+        },
+        "context": "Painted in Germany after the Napoleonic wars, when many people longed for freedom and a sense of belonging. For Romantics, nature was something huge and spiritual, far bigger than any person.",
+        "artistBio": "Caspar David Friedrich (1774–1840) was a German painter of silence, fog and lonely figures. He often said an artist should paint not only what he sees, but what he sees within himself."
+      }
+    ]
+  },
+  {
+    "id": "impressionism",
+    "order": 9,
+    "name": "Impressionism",
+    "yearRange": "c. 1865–1885",
+    "description": "Impressionists took their easels outdoors and tried to catch a fleeting moment: light, haze, reflections, all in quick, visible brushstrokes.",
+    "artworks": [
+      {
+        "id": "impression-sunrise",
+        "title": "Impression, Sunrise",
+        "artist": "Claude Monet",
+        "year": "1872",
+        "imageKey": "impression-sunrise",
+        "imageCredit": "Claude Monet, public domain, via Wikimedia Commons",
+        "description": "Small boats drift through a misty harbor while a bright orange sun rises over the water.",
+        "story": "This painting gave a whole movement its name, as an insult. When Monet showed it in 1874, the critic Louis Leroy mocked it in a review, saying wallpaper in its first stage looked more finished, and he sarcastically called the group 'Impressionists'. The artists liked the word and kept it.",
+        "lookCloser": [
+          "The orange sun is painted with just a few quick strokes, but it lights up the whole scene.",
+          "The boats are only dark shapes, with almost no detail.",
+          "The sun and the gray-blue clouds are very close in brightness, which makes the sun glow without being the lightest thing in the picture."
+        ],
+        "details": {
+          "medium": "Oil on canvas",
+          "dimensions": "48 × 63 cm",
+          "location": "Musée Marmottan Monet, Paris"
+        },
+        "context": "Monet painted the harbor of Le Havre, in northern France, from his window. Newly invented tube paints let artists carry colors outdoors, which made painting quick, fresh scenes possible.",
+        "artistBio": "Claude Monet (1840–1926) spent his life chasing light: haystacks, cathedrals, water lilies, painted again and again at different hours and seasons."
+      }
+    ]
+  },
+  {
+    "id": "post-impressionism",
+    "order": 10,
+    "name": "Post-Impressionism",
+    "yearRange": "c. 1885–1905",
+    "description": "Post-Impressionists started with the Impressionist love of color and then went their own ways: toward emotion, structure and symbols, each in a very personal style.",
+    "artworks": [
+      {
+        "id": "the-starry-night",
+        "title": "The Starry Night",
+        "artist": "Vincent van Gogh",
+        "year": "1889",
+        "imageKey": "the-starry-night",
+        "imageCredit": "Vincent van Gogh, public domain, via Wikimedia Commons",
+        "description": "A glowing night sky swirls above a sleeping village, with a dark cypress tree reaching up like a flame.",
+        "story": "Van Gogh painted this while staying at an asylum in Saint-Rémy, in southern France. The view from his window was real, but the painting was made later, by day, from memory. The village is partly invented, and its church looks more like the ones back in his native Netherlands than like any in Provence.",
+        "lookCloser": [
+          "Follow the swirling strokes in the sky: they look like waves, wind and light at once.",
+          "The tall dark cypress connects the earth to the sky.",
+          "Count the stars: each one is surrounded by a halo of tiny, separate brushstrokes."
+        ],
+        "details": {
+          "medium": "Oil on canvas",
+          "dimensions": "73.7 × 92.1 cm",
+          "location": "Museum of Modern Art, New York"
+        },
+        "context": "In 1889 Van Gogh was working through a difficult period of his life, and painting was his way of staying anchored. He used color and rhythm to show what the night felt like to him, not just what it looked like.",
+        "artistBio": "Vincent van Gogh (1853–1890) was a Dutch painter who created around 2,000 works in about a decade, most of them in the last few years of his life."
+      }
+    ]
   }
 ]
