@@ -8,14 +8,25 @@
     "artworks": [
       {
         "id": "arnolfini-portrait",
-        "title": "The Arnolfini Portsrait",
+        "title": "The Arnolfini Portrait",
         "artist": "Jan van Eyck",
         "year": "1434",
         "imageKey": "arnolfini-portrait",
         "imageCredit": "Jan van Eyck, public domain, via Wikimedia Commons",
-        "description": "A couple stands in a quiet room, hand in hand. Nothing here is accidental: the single candle, the little dog and the shoes on the floor all carry meaning.",
-        "artistBio": "Jan van Eyck was a painter working in Bruges in the 1400s. He perfected the use of oil paint, building up thin glowing layers that made his surfaces shine like jewels.",
-        "funFact": "Above the mirror on the back wall he wrote 'Jan van Eyck was here, 1434'. In the mirror you can see two tiny figures entering the room, and one of them may be the painter himself."
+        "description": "A couple stands in a quiet room, hand in hand. Nothing here is accidental: every object seems to be whispering something.",
+        "story": "For a long time people called this a secret wedding certificate, with the painter himself as the witness. Historians still argue about it. They even argue about which Arnolfini the man is. And the woman? Her round belly is not a baby announcement: it was simply the fashion, with yards of heavy fabric gathered in front.",
+        "lookCloser": [
+          "The round mirror on the back wall shows the whole room from behind, including two people standing in the doorway.",
+          "The frame of that mirror holds ten tiny scenes from the story of Christ's Passion.",
+          "Above the mirror, the painter signed the wall: 'Jan van Eyck was here, 1434'."
+        ],
+        "details": {
+          "medium": "Oil on oak panel",
+          "dimensions": "82.2 × 60 cm",
+          "location": "National Gallery, London"
+        },
+        "context": "It was painted in Bruges, then one of the richest trading cities in Europe, full of Italian merchants. Van Eyck built his glowing colors from thin, transparent layers of oil paint. That technique helped make oil the favorite paint of European artists.",
+        "artistBio": "Jan van Eyck worked in Bruges in the 1400s. He perfected the use of oil paint, making surfaces shine like jewels and details sharp enough to count the hairs on a dog."
       }
     ]
   }
