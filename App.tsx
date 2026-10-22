@@ -6,6 +6,7 @@ import { CalendarStack } from './src/navigation/CalendarStack';
 import { FavoritesStack } from './src/navigation/FavoritesStack';
 import { TimelineStack } from './src/navigation/TimelineStack';
 import { MuseumScreen } from './src/screens/placeholders';
+import { SurpriseScreen } from './src/screens/SurpriseScreen';
 import { FavoritesProvider } from './src/state/FavoritesContext';
 import { ProgressProvider } from './src/state/ProgressContext';
 
@@ -38,6 +39,15 @@ export default function App() {
               options={{
                 tabBarIcon: ({ color, size }) => (
                   <Ionicons name="calendar-outline" color={color} size={size} />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Surprise"
+              component={SurpriseScreen}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <Ionicons name="sparkles-outline" color={color} size={size} />
                 ),
               }}
             />
