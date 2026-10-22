@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 64,
     paddingBottom: 48,
-    backgroundColor: '#fae2c8',
+    backgroundColor: '#fae9d7',
   },
   back: { alignSelf: 'flex-start', paddingVertical: 8, marginBottom: 8 },
   backText: { fontSize: 18, color: '#7A5C14' },
