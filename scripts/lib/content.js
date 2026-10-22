@@ -71,6 +71,14 @@ function buildArtwork(data, body, source) {
       errors.push(`${source}: missing section "## ${section}"`);
     }
   }
+    if (
+    sections['Look closer'] &&
+    toBullets(sections['Look closer']).length === 0
+  ) {
+    errors.push(
+      `${source}: section "Look closer" needs at least one "- " bullet`
+    );
+  }
   if (errors.length > 0) return { errors };
 
   return {
