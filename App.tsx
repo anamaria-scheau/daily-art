@@ -4,6 +4,8 @@ import { Accordion } from './src/components/Accordion';
 import movements from './src/data/movements.json';
 import { images } from './src/data/images';
 import { Movement } from './src/types/movement';
+import { ZoomableImage } from './src/components/ZoomableImage';
+
 
 const movement = (movements as Movement[])[0];
 const artwork = movement.artworks[0];
@@ -12,7 +14,7 @@ export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.movement}>{movement.name}</Text>
-      <Image
+      <ZoomableImage
         source={images[artwork.imageKey]}
         style={styles.image}
         resizeMode="contain"
