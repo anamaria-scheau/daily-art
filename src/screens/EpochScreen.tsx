@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 64,
     paddingBottom: 48,
-    backgroundColor: '#f1bc7e',
+    backgroundColor: '#f7c893',
   },
   movement: { fontSize: 16, color: '#7A5C14', marginBottom: 16 },
   title: { fontSize: 28, fontWeight: '600', marginBottom: 4 },
