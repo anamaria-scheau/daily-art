@@ -1,9 +1,10 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ArtworkView } from '../components/ArtworkView';
 import { findArtwork } from '../data/catalog';
-import { TimelineStackParamList } from '../navigation/types';
 
-type Props = NativeStackScreenProps<TimelineStackParamList, 'Artwork'>;
+type Props = {
+  route: { params: { artworkId: string } };
+  navigation: { goBack: () => void };
+};
 
 export function ArtworkScreen({ route, navigation }: Props) {
   const found = findArtwork(route.params.artworkId);

@@ -1,16 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-function Placeholder({ title }: { title: string }) {
+export function MuseumScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.title}>Museum</Text>
     </View>
   );
 }
-
-export const CalendarScreen = () => <Placeholder title="Calendar" />;
-export const FavoritesScreen = () => <Placeholder title="Favorites" />;
-export const MuseumScreen = () => <Placeholder title="Museum" />;
 
 const styles = StyleSheet.create({
   container: {
@@ -19,5 +15,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FAF8F4',
   },
-  text: { fontSize: 24, color: '#211D17' },
+  title: { fontSize: 28, fontWeight: '600', color: '#211D17' },
 });

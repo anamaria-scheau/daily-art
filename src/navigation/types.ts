@@ -8,3 +8,8 @@ export type CalendarStackParamList = {
   Calendar: undefined;
   Day: { artworkId: string };
 };
+
+export type FavoritesStackParamList = {
+  Favorites: undefined;
+  Artwork: { artworkId: string };
+};

@@ -1,5 +1,7 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { images } from '../data/images';
+import { useFavorites } from '../state/FavoritesContext';
 import { Artwork } from '../types/movement';
 import { Accordion } from './Accordion';
 import { ZoomableImage } from './ZoomableImage';
@@ -23,16 +25,38 @@ type Props = {
 };
 
 export function ArtworkView({ movementName, artwork, onBack }: Props) {
+  const { isFavorite, toggle } = useFavorites();
+  const favorite = isFavorite(artwork.id);
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Pressable
-        onPress={onBack}
-        accessibilityRole="button"
-        accessibilityLabel="Go back"
-        style={styles.back}
-      >
-        <Text style={styles.backText}>‹ Back</Text>
-      </Pressable>
+      <View style={styles.topRow}>
+        <Pressable
+          onPress={onBack}
+          accessibilityRole="button"
+          accessibilityLabel="Go back"
+          style={styles.back}
+        >
+          <Text style={styles.backText}>‹ Back</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => toggle(artwork.id)}
+          accessibilityRole="button"
+          accessibilityLabel={
+            favorite ? 'Remove from favorites' : 'Add to favorites'
+          }
+          accessibilityState={{ selected: favorite }}
+          hitSlop={12}
+          style={styles.heart}
+        >
+          <Ionicons
+            name={favorite ? 'heart' : 'heart-outline'}
+            size={28}
+            color={favorite ? '#B3412F' : '#7A5C14'}
+          />
+        </Pressable>
+      </View>
 
       <Text style={styles.movement}>{movementName}</Text>
       <ZoomableImage source={images[artwork.imageKey]} />
@@ -83,8 +107,15 @@ const styles = StyleSheet.create({
     paddingBottom: 48,
     backgroundColor: '#f5e8d9',
   },
-  back: { alignSelf: 'flex-start', paddingVertical: 8, marginBottom: 8 },
+  topRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  back: { paddingVertical: 8 },
   backText: { fontSize: 18, color: '#7A5C14' },
+  heart: { padding: 4 },
   movement: { fontSize: 16, color: '#7A5C14', marginBottom: 16 },
   title: { fontSize: 28, fontWeight: '600', marginBottom: 4 },
   artist: { fontSize: 16, color: '#6B6557', marginBottom: 16 },
