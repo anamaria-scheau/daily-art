@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 64,
     paddingBottom: 48,
-    backgroundColor: '#f1bc7e',
+    backgroundColor: '#f5e8d9',
   },
   back: { alignSelf: 'flex-start', paddingVertical: 8, marginBottom: 8 },
   backText: { fontSize: 18, color: '#7A5C14' },
