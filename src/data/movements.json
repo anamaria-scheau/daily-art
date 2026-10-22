@@ -14,19 +14,27 @@
         "imageKey": "arnolfini-portrait",
         "imageCredit": "Jan van Eyck, public domain, via Wikimedia Commons",
         "description": "A couple stands in a quiet room, hand in hand. Nothing here is accidental: every object seems to be whispering something.",
-        "story": "For a long time people called this a secret wedding certificate, with the painter himself as the witness. Historians still argue about it. They even argue about which Arnolfini the man is. And the woman? Her round belly is not a baby announcement: it was simply the fashion, with yards of heavy fabric gathered in front.",
+        "story": [
+          "Imagine opening a door in 1434 and finding this couple in the middle of a hushed moment. He raises his right hand, as if taking an oath or greeting someone who has just walked in. She rests her hand in his, head tilted, eyes lowered. Nobody speaks.",
+          "What is happening? For a long time scholars read it as a wedding held at home, with Van Eyck's signature on the wall acting like a witness's signature, and the two tiny figures in the mirror as the other witnesses. Others now think it may simply be a portrait of a married couple, not a ceremony at all. Nobody can say for sure, and that uncertainty is exactly what keeps people staring. (And her round belly? Probably not a pregnancy: the fashion was to gather yards of heavy fabric in front.)",
+          "Look at their faces. Neither smiles. He seems formal and a little guarded, she calm and patient. Perhaps they are thinking about the future: a household, a family, a business. As a viewer you feel like a guest who walked in a moment too early. You are seeing something private, and the mirror reminds you that someone else stands in the room too, and that someone is you."
+        ],
         "lookCloser": [
           "The round mirror on the back wall shows the whole room from behind, including two people standing in the doorway.",
           "The frame of that mirror holds ten tiny scenes from the story of Christ's Passion.",
           "Above the mirror, the painter signed the wall: 'Jan van Eyck was here, 1434'."
         ],
+        "context": [
+          "Bruges in the 1430s was one of the richest cities in Europe, a hub of cloth, banking and trade where merchants from Italy settled. The man is usually identified as Giovanni di Nicolao Arnolfini, an Italian merchant living there, though historians disagree about which member of the family it is. Everything in the room says money: the imported oranges on the windowsill, the carpet, the brass chandelier, the fur-lined clothes.",
+          "The painting is also a showcase for a new technique. Instead of fast-drying tempera, Van Eyck used oil paint in thin, transparent layers, which let him capture the glow of a window, the sheen of silk and the softness of fur. This is why every surface looks so real. The panel entered the National Gallery in London in 1842, where it still hangs."
+        ],
+        "artistBio": "Jan van Eyck (c. 1390–1441) was among the most celebrated painters of his age. He worked as a court painter and trusted servant of Philip the Good, Duke of Burgundy, and even travelled on diplomatic missions for him, including a trip to Portugal to paint a future bride for the duke. A popular old myth says he invented oil painting. He did not, but he took it to a level of detail and glow that astonished everyone.",
+        "artistAtTheTime": "In 1434 Van Eyck was in his forties and had been settled in Bruges for a few years, working for the duke while accepting private commissions from wealthy locals. Signing a work with a playful sentence like 'was here', as if he were one of the guests, was highly unusual for the time. It also tells us the exact year it was painted.",
         "details": {
           "medium": "Oil on oak panel",
           "dimensions": "82.2 × 60 cm",
           "location": "National Gallery, London"
-        },
-        "context": "It was painted in Bruges, then one of the richest trading cities in Europe, full of Italian merchants. Van Eyck built his glowing colors from thin, transparent layers of oil paint. That technique helped make oil the favorite paint of European artists.",
-        "artistBio": "Jan van Eyck worked in Bruges in the 1400s. He perfected the use of oil paint, making surfaces shine like jewels and details sharp enough to count the hairs on a dog."
+        }
       }
     ]
   },
@@ -45,19 +53,27 @@
         "imageKey": "mona-lisa",
         "imageCredit": "Leonardo da Vinci, public domain, via Wikimedia Commons",
         "description": "A woman sits calmly, hands folded, with a faint smile that seems to change the longer you look.",
-        "story": "The most famous painting in the world was once just a stolen painting. In 1911 a Louvre worker, Vincenzo Peruggia, hid in the museum, walked out with it under his coat and kept it for two years. The theft made it a global celebrity. Leonardo, meanwhile, never delivered it to the client and carried it with him until the end of his life.",
+        "story": [
+          "She looks at you, and the longer you look, the less sure you are what she feels. Amused? Patient? Hiding a secret? Leonardo built that uncertainty on purpose. The corners of her mouth and eyes are blurred into soft shadow, so your own mind fills in the emotion, and it seems to shift every time you glance back.",
+          "Think of what she might be thinking. She had to hold this pose for hours, session after session. Giorgio Vasari, writing decades later, claimed that Leonardo hired musicians and jesters to keep his sitter relaxed. If that is true, her famous smile might simply be a person trying not to laugh at a juggler.",
+          "And then there is the theft. In 1911 Vincenzo Peruggia, a former Louvre worker, hid in the museum and walked out with her under his coat. For two years she was gone, until he tried to sell her in Florence. Overnight a quiet portrait became the most famous face on Earth. Today you stand in a crowd behind a barrier, and she still calmly looks back."
+        ],
         "lookCloser": [
           "The corners of her mouth and eyes are painted in soft, smoky shadows, with no hard outlines.",
           "The winding landscape behind her looks slightly different on the left and on the right.",
           "Her hands are relaxed and layered, a pose that was fresh and modern in her time."
         ],
+        "context": [
+          "The painting was begun in Florence around 1503. The sitter is usually thought to be Lisa Gherardini, wife of a silk merchant named Francesco del Giocondo, which is why it is called La Gioconda in Italian and La Joconde in French. Leonardo kept working on it for years and never handed it over to the client. He took it with him to France, and it ended up in the collection of the French kings, and later in the Louvre.",
+          "Leonardo used a technique called sfumato, from the Italian word for 'smoky': many extremely thin glazes of paint that melt light into shadow with no visible edges. The portrait also shows the Renaissance fascination with the individual: not a saint or a king, but a person, with a personality you can almost feel."
+        ],
+        "artistBio": "Leonardo da Vinci (1452–1519) was born in Vinci, near Florence. He was a painter, engineer, anatomist and endless note-taker, and he filled thousands of pages of notebooks, written in mirror writing, with flying machines, water studies and dissections. Fewer than twenty paintings are firmly attributed to him, because he was always starting new ideas and leaving things unfinished.",
+        "artistAtTheTime": "Around 1503 Leonardo was about fifty and back in Florence after years in Milan and a stint as a military engineer for Cesare Borgia. That same period he was working on a huge battle mural for the city hall, in rivalry with a young Michelangelo. The portrait of Lisa was a quieter project that he kept coming back to and refining.",
         "details": {
           "medium": "Oil on poplar panel",
           "dimensions": "77 × 53 cm",
           "location": "Louvre Museum, Paris"
-        },
-        "context": "The sitter is usually thought to be Lisa Gherardini, wife of a Florentine silk merchant, which is why the painting is also called La Gioconda. Leonardo used a technique called sfumato, building up extremely thin glazes to melt light into shadow.",
-        "artistBio": "Leonardo da Vinci (1452–1519) was a painter, engineer, anatomist and endless note-taker. His notebooks, written in mirror writing, are full of flying machines and water studies."
+        }
       }
     ]
   },
@@ -76,19 +92,27 @@
         "imageKey": "calling-of-saint-matthew",
         "imageCredit": "Caravaggio, public domain, via Wikimedia Commons",
         "description": "In a dim tavern, a beam of light cuts through the room just as a stranger points at a tax collector.",
-        "story": "Caravaggio painted saints like people from the street, in ordinary clothes, in a dark tavern. That was shocking and thrilling at the same time. The painter was just as dramatic as his canvases: in 1606 he killed a man in a brawl and had to flee Rome for the rest of his short life.",
+        "story": [
+          "Imagine a gloomy room in Rome. Men sit around a table counting coins, absorbed in money. Suddenly the door opens, a shaft of light slices across the wall, and a figure points straight at one of them. Everybody freezes. Christ stands at the edge of the scene, half hidden behind Peter, and almost all the drama is in a single outstretched hand.",
+          "The man being pointed at lifts a finger toward his own chest, as if saying 'Who, me?' Art historians still debate which man is Matthew: the bearded one who points at himself, or the young man bent over the coins who does not even look up. If it is the youth, the scene is even more tense: someone who has not yet noticed that his life is about to change.",
+          "What are they thinking? The tax collector: 'I'm busy, I'm making a living.' The young men beside him: 'Don't drag me into this.' And you, the viewer, feel the pull of that light. It is the moment a calling interrupts an ordinary day. Caravaggio set it in an everyday room, with ordinary clothes and ordinary faces, so the miracle feels like it could happen to anyone, anywhere, even to you."
+        ],
         "lookCloser": [
           "A single beam of light enters from the right and seems to follow the pointing hand.",
           "The men at the table wear clothes from Caravaggio's own time, not from biblical times.",
-          "Art historians still debate which man at the table is Matthew: the bearded one pointing at himself, or the young man looking down at the coins."
+          "Follow the line from Christ's hand across the room to Matthew: the whole painting is built on that diagonal."
         ],
+        "context": [
+          "The painting was made in 1599–1600 for a chapel in San Luigi dei Francesi, the French church in Rome, and it was Caravaggio's first major public commission. It made him famous almost overnight. The Church of that period wanted art that was clear, emotional and easy for ordinary believers to relate to, and Caravaggio delivered exactly that, in a way nobody had done before.",
+          "His style, with deep shadows against bright light, is called tenebrism, and it changed European painting. Artists from Spain to the Netherlands copied it, and they are known as the Caravaggisti. The painting still hangs in the chapel it was made for, so you can stand in the same room where it was meant to be seen."
+        ],
+        "artistBio": "Caravaggio (1571–1610), whose real name was Michelangelo Merisi, trained in Milan and came to Rome around 1592. He was famous for painting saints from real, street-level models, and for a stormy life with repeated trouble with the law. In 1606 he killed a man in a brawl and had to flee Rome, spending his last years in Naples, Malta and Sicily. He died at 38, on a journey back toward Rome.",
+        "artistAtTheTime": "In 1599 Caravaggio was about 28 and living in Rome under the protection of Cardinal Francesco Maria Del Monte. Until then he had mostly painted smaller works for private collectors. The Contarelli Chapel was his first big public job, and he rose to it, using live models as he always did.",
         "details": {
           "medium": "Oil on canvas",
           "dimensions": "322 × 340 cm",
           "location": "Contarelli Chapel, San Luigi dei Francesi, Rome"
-        },
-        "context": "The painting was made for a church chapel in Rome and still hangs there. Caravaggio pushed a style called tenebrism, using deep darkness against bright light to turn a quiet moment into a lightning strike.",
-        "artistBio": "Caravaggio (1571–1610), born Michelangelo Merisi, was a hot-tempered genius who changed painting forever. Many Baroque painters across Europe copied his light."
+        }
       }
     ]
   },
@@ -107,19 +131,27 @@
         "imageKey": "wanderer-above-the-sea-of-fog",
         "imageCredit": "Caspar David Friedrich, public domain, via Wikimedia Commons",
         "description": "A man stands on a rocky peak with his back to us, looking out over a sea of fog.",
-        "story": "This view does not exist. Friedrich built it in his studio from separate sketches of real rocks and mountains, then added the man and the fog. We never see the wanderer's face, so the picture becomes about us: what would you feel standing there? Nobody knows for sure who the man is.",
+        "story": [
+          "A man stands on a rock, back to us, coat stirring in the wind, a walking stick in his hand. Below him, fog drowns a landscape of peaks and valleys. He is not hurrying anywhere. He has simply stopped at the top, and he looks.",
+          "What is he thinking? Triumph at reaching the summit? A feeling of being tiny in front of something enormous? Loneliness? Friedrich gives no answer, because we cannot see his face. That is the trick: the figure is an empty seat, and you sit in it. Whatever you feel, awe, calm, a little fear, becomes his feeling too.",
+          "Even the view is a daydream. Friedrich is thought to have built it in his studio from separate sketches of different real places in the mountains of Saxony and Bohemia. The famous landscape never existed as such. It is a landscape of the mind, which is exactly what the Romantics wanted to paint. Nobody knows who the wanderer is, and some people think he is a stand-in for the painter himself."
+        ],
         "lookCloser": [
           "The man is seen from behind, so you stand in his place and share his view.",
           "The fog blurs the distance, so the world seems to go on forever.",
           "The rocks in front are sharply painted, while the faraway peaks almost melt into the sky."
         ],
+        "context": [
+          "Painted around 1818 in Dresden, only a few years after the end of the Napoleonic wars. Germany was divided into many small states, and many people dreamed of freedom and unity. Some historians suggest that the wanderer's dark coat resembles the clothing worn by young German patriots of the time, which may give the picture a political shade as well as a spiritual one.",
+          "Romanticism valued emotion, imagination and the overwhelming power of nature, the 'sublime', over reason and order. Friedrich's landscapes often feel like silent prayers. This painting is now in the Hamburger Kunsthalle in Germany and has become an icon of the whole movement."
+        ],
+        "artistBio": "Caspar David Friedrich (1774–1840) was born in Greifswald, on the Baltic coast, studied in Copenhagen and settled in Dresden. He painted silence: fog, ruins, moonlit seas and lonely figures. He was admired in his time, but later fell out of fashion, and after a stroke in 1835 he painted very little. He was rediscovered in the early twentieth century.",
+        "artistAtTheTime": "In 1818 Friedrich was in his mid-forties and had just married Caroline Bommer. The couple travelled to the island of Rügen on their honeymoon, and he painted the famous Chalk Cliffs on Rügen that same year. It was a happy and productive period for an artist who is usually remembered for solitude.",
         "details": {
           "medium": "Oil on canvas",
           "dimensions": "94.8 × 74.8 cm",
           "location": "Hamburger Kunsthalle, Hamburg"
-        },
-        "context": "Painted in Germany after the Napoleonic wars, when many people longed for freedom and a sense of belonging. For Romantics, nature was something huge and spiritual, far bigger than any person.",
-        "artistBio": "Caspar David Friedrich (1774–1840) was a German painter of silence, fog and lonely figures. He often said an artist should paint not only what he sees, but what he sees within himself."
+        }
       }
     ]
   },
@@ -138,19 +170,27 @@
         "imageKey": "impression-sunrise",
         "imageCredit": "Claude Monet, public domain, via Wikimedia Commons",
         "description": "Small boats drift through a misty harbor while a bright orange sun rises over the water.",
-        "story": "This painting gave a whole movement its name, as an insult. When Monet showed it in 1874, the critic Louis Leroy mocked it in a review, saying wallpaper in its first stage looked more finished, and he sarcastically called the group 'Impressionists'. The artists liked the word and kept it.",
+        "story": [
+          "It is early morning in the harbor of Le Havre. The air is cold and damp, and everything melts into a blue-gray haze: cranes, masts and chimneys barely visible. Little rowboats glide by. And one small orange sun, painted in a few quick strokes, sets the water on fire with its reflection.",
+          "In 1874 this painting hung in an exhibition organized by artists whom the official Salon had rejected. A critic named Louis Leroy wandered through it and wrote a mocking review, joking that even unfinished wallpaper looked more complete than this seascape. He sarcastically called the whole group 'Impressionists', after this very title. The painters, instead of being offended, kept the name, and it became one of the most famous labels in art history.",
+          "What does a viewer feel? Not information, but atmosphere: the chill, the quiet, the wonder of a moment that will be gone in minutes. Monet does not paint the harbor as it is. He paints how a single instant felt. If you blink, the light changes, and that is exactly the point."
+        ],
         "lookCloser": [
           "The orange sun is painted with just a few quick strokes, but it lights up the whole scene.",
           "The boats are only dark shapes, with almost no detail.",
-          "The sun and the gray-blue clouds are very close in brightness, which makes the sun glow without being the lightest thing in the picture."
+          "The sun and the gray-blue clouds are very close in brightness, so the sun glows without being the lightest thing in the picture."
         ],
+        "context": [
+          "Monet painted this in 1872 from a window overlooking the port of Le Havre, the town where he grew up. At the time, 'serious' art meant polished scenes from history and myth, and the Paris Salon decided who got seen. A group of artists, including Monet, Renoir, Pissarro, Degas and Morisot, organized their own independent show in 1874 in the studio of the photographer Nadar.",
+          "New inventions helped them: paint sold in metal tubes made it easy to carry colors outdoors, and railways let painters reach the coast and the countryside. Centuries later this little painting had its own adventure: it was stolen from the Musée Marmottan in 1985 and recovered five years later."
+        ],
+        "artistBio": "Claude Monet (1840–1926) was born in Paris and grew up in Le Havre, where a local painter named Eugène Boudin taught him to paint outdoors. His whole life became a chase after light: haystacks, Rouen Cathedral, and above all the water lilies of his garden at Giverny, painted again and again at different hours and seasons.",
+        "artistAtTheTime": "In 1872 Monet was in his early thirties, recently settled in Argenteuil near Paris after spending time abroad during the Franco-Prussian war. He lived there with his wife Camille and their young son Jean. Money was tight and success was uncertain, which makes the confidence of this quick sunrise even more striking.",
         "details": {
           "medium": "Oil on canvas",
           "dimensions": "48 × 63 cm",
           "location": "Musée Marmottan Monet, Paris"
-        },
-        "context": "Monet painted the harbor of Le Havre, in northern France, from his window. Newly invented tube paints let artists carry colors outdoors, which made painting quick, fresh scenes possible.",
-        "artistBio": "Claude Monet (1840–1926) spent his life chasing light: haystacks, cathedrals, water lilies, painted again and again at different hours and seasons."
+        }
       }
     ]
   },
@@ -169,19 +209,27 @@
         "imageKey": "the-starry-night",
         "imageCredit": "Vincent van Gogh, public domain, via Wikimedia Commons",
         "description": "A glowing night sky swirls above a sleeping village, with a dark cypress tree reaching up like a flame.",
-        "story": "Van Gogh painted this while staying at an asylum in Saint-Rémy, in southern France. The view from his window was real, but the painting was made later, by day, from memory. The village is partly invented, and its church looks more like the ones back in his native Netherlands than like any in Provence.",
+        "story": [
+          "Imagine the sky as something alive. It swirls, glows and breathes. Stars burst like fireworks, each inside its own halo, and the moon is a fiery crescent. Below, a tiny village sleeps with a few lit windows, and a dark cypress climbs toward the sky like a flame turned black.",
+          "Van Gogh painted this while staying at an asylum in Saint-Rémy, at a fragile time of his life. From his window he could see the sky before dawn and the hills, but he painted the picture later, by day, from memory, and he invented the village, giving it a church spire that looks more like those of his native Netherlands than of Provence. So it is not a view. It is a feeling about a night, remembered and remade.",
+          "What might he have felt? Some people see turmoil in the sky, others comfort: the village is calm while the heavens are wild, as if the energy of the universe and the quiet of human life exist side by side. The viewer feels both, small and held at once. Van Gogh once wrote to his brother Theo that just as we take a train to reach a town, perhaps death is how we reach a star."
+        ],
         "lookCloser": [
           "Follow the swirling strokes in the sky: they look like waves, wind and light at once.",
           "The tall dark cypress connects the earth to the sky.",
           "Count the stars: each one is surrounded by a halo of tiny, separate brushstrokes."
         ],
+        "context": [
+          "The painting dates from June 1889 and was made at the asylum of Saint-Paul-de-Mausole in Saint-Rémy-de-Provence, in the south of France. Van Gogh had checked himself in voluntarily after his breakdown in Arles the winter before. He was allowed to paint, and the staff gave him a room to use as a studio.",
+          "Post-Impressionism came after Impressionism's quick studies of light. Artists like Van Gogh, Cézanne and Gauguin used color, line and rhythm to express feeling and structure. Van Gogh's thick paint and swirling strokes are among the most recognizable results. The painting has been in the Museum of Modern Art in New York since 1941."
+        ],
+        "artistBio": "Vincent van Gogh (1853–1890) was born in Zundert, in the Netherlands. He worked as an art dealer, a teacher and a preacher before turning to painting in his late twenties. In under ten years he made around 2,100 artworks, including about 860 oil paintings, and he died at 37 in Auvers-sur-Oise. His brother Theo supported him and kept hundreds of his letters.",
+        "artistAtTheTime": "In 1889 Van Gogh was 36 and recovering in the asylum after his crisis in Arles, supported financially by Theo. That same year he painted many of his most famous works: cypresses, olive trees and wheat fields. His letters suggest that painting was the thing that kept him steady.",
         "details": {
           "medium": "Oil on canvas",
           "dimensions": "73.7 × 92.1 cm",
           "location": "Museum of Modern Art, New York"
-        },
-        "context": "In 1889 Van Gogh was working through a difficult period of his life, and painting was his way of staying anchored. He used color and rhythm to show what the night felt like to him, not just what it looked like.",
-        "artistBio": "Vincent van Gogh (1853–1890) was a Dutch painter who created around 2,000 works in about a decade, most of them in the last few years of his life."
+        }
       }
     ]
   }

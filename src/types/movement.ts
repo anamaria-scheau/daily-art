@@ -12,11 +12,12 @@ export type Artwork = {
   imageKey: string;
   imageCredit: string;
   description: string;
-  story: string;
+  story: string[];
   lookCloser: string[];
-  details: ArtworkDetails;
-  context: string;
+  context: string[];
   artistBio: string;
+  artistAtTheTime: string;
+  details: ArtworkDetails;
 };
 
 export type Movement = {

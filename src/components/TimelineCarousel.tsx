@@ -5,6 +5,7 @@ import {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Pressable,
   StyleSheet,
   Text,
   View,
@@ -46,9 +47,16 @@ type ItemProps = {
   index: number;
   scrollX: SharedValue<number>;
   layout: Layout;
+  onPress: () => void;
 };
 
-function TimelineItem({ movement, index, scrollX, layout }: ItemProps) {
+function TimelineItem({
+  movement,
+  index,
+  scrollX,
+  layout,
+  onPress,
+}: ItemProps) {
   const above = index % 2 === 0;
   const cover = images[movement.artworks[0].imageKey];
   const { axisY, medallion, stem } = layout;
@@ -89,7 +97,10 @@ function TimelineItem({ movement, index, scrollX, layout }: ItemProps) {
           { height: stem, top: above ? axisY - stem : axisY },
         ]}
       />
-      <View
+      <Pressable
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel={`Open ${movement.name}`}
         style={[
           styles.medallion,
           {
@@ -102,7 +113,7 @@ function TimelineItem({ movement, index, scrollX, layout }: ItemProps) {
         ]}
       >
         <Image source={cover} style={styles.cover} />
-      </View>
+      </Pressable>
       <View
         style={[
           styles.label,
@@ -124,9 +135,14 @@ function TimelineItem({ movement, index, scrollX, layout }: ItemProps) {
 type Props = {
   movements: Movement[];
   onActiveChange: (index: number) => void;
+  onSelect: (movement: Movement) => void;
 };
 
-export function TimelineCarousel({ movements, onActiveChange }: Props) {
+export function TimelineCarousel({
+  movements,
+  onActiveChange,
+  onSelect,
+}: Props) {
   const [height, setHeight] = useState(0);
   const scrollX = useSharedValue(0);
 
@@ -174,6 +190,7 @@ export function TimelineCarousel({ movements, onActiveChange }: Props) {
                 index={index}
                 scrollX={scrollX}
                 layout={layout}
+                onPress={() => onSelect(item)}
               />
             )}
           />

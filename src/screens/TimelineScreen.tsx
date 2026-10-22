@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { TimelineCarousel } from '../components/TimelineCarousel';
 import movementsData from '../data/movements.json';
+import { TimelineStackParamList } from '../navigation/types';
 import { Movement } from '../types/movement';
 
 const movements = movementsData as Movement[];
 
-export function TimelineScreen() {
+type Props = NativeStackScreenProps<TimelineStackParamList, 'Timeline'>;
+
+export function TimelineScreen({ navigation }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = movements[activeIndex];
 
@@ -18,6 +22,9 @@ export function TimelineScreen() {
         <TimelineCarousel
           movements={movements}
           onActiveChange={setActiveIndex}
+          onSelect={(movement) =>
+            navigation.navigate('Epoch', { movementId: movement.id })
+          }
         />
       </View>
 
@@ -31,7 +38,7 @@ export function TimelineScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f8e3b4', paddingTop: 64 },
+  container: { flex: 1, backgroundColor: '#FAF8F4', paddingTop: 64 },
   header: {
     fontSize: 28,
     fontWeight: '600',

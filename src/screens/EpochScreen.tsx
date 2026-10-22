@@ -1,16 +1,44 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Accordion } from '../components/Accordion';
 import { ZoomableImage } from '../components/ZoomableImage';
-import movements from '../data/movements.json';
+import movementsData from '../data/movements.json';
 import { images } from '../data/images';
+import { TimelineStackParamList } from '../navigation/types';
 import { Movement } from '../types/movement';
 
-const movement = (movements as Movement[])[0];
-const artwork = movement.artworks[0];
+const movements = movementsData as Movement[];
 
-export function EpochScreen() {
+type Props = NativeStackScreenProps<TimelineStackParamList, 'Epoch'>;
+
+function Paragraphs({ items }: { items: string[] }) {
+  return (
+    <>
+      {items.map((text) => (
+        <Text key={text} style={styles.body}>
+          {text}
+        </Text>
+      ))}
+    </>
+  );
+}
+
+export function EpochScreen({ route, navigation }: Props) {
+  const movement = movements.find((m) => m.id === route.params.movementId);
+  if (!movement) return null;
+  const artwork = movement.artworks[0];
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <Pressable
+        onPress={() => navigation.goBack()}
+        accessibilityRole="button"
+        accessibilityLabel="Back to timeline"
+        style={styles.back}
+      >
+        <Text style={styles.backText}>‹ Back</Text>
+      </Pressable>
+
       <Text style={styles.movement}>{movement.name}</Text>
       <ZoomableImage source={images[artwork.imageKey]} />
       <Text style={styles.title}>{artwork.title}</Text>
@@ -21,7 +49,7 @@ export function EpochScreen() {
 
       <View style={styles.sections}>
         <Accordion title="The Gossip" defaultOpen>
-          <Text style={styles.body}>{artwork.story}</Text>
+          <Paragraphs items={artwork.story} />
         </Accordion>
 
         <Accordion title="Look closer">
@@ -32,18 +60,21 @@ export function EpochScreen() {
           ))}
         </Accordion>
 
+        <Accordion title="History & Context">
+          <Paragraphs items={artwork.context} />
+        </Accordion>
+
+        <Accordion title="About the artist">
+          <Text style={styles.subtitle}>{artwork.artist}</Text>
+          <Text style={styles.body}>{artwork.artistBio}</Text>
+          <Text style={styles.subtitle}>When this was painted</Text>
+          <Text style={styles.body}>{artwork.artistAtTheTime}</Text>
+        </Accordion>
+
         <Accordion title="The Details">
           <Text style={styles.body}>{artwork.details.medium}</Text>
           <Text style={styles.body}>{artwork.details.dimensions}</Text>
           <Text style={styles.body}>{artwork.details.location}</Text>
-        </Accordion>
-
-        <Accordion title="History & Context">
-          <Text style={styles.body}>{artwork.context}</Text>
-        </Accordion>
-
-        <Accordion title="About the artist">
-          <Text style={styles.body}>{artwork.artistBio}</Text>
         </Accordion>
       </View>
     </ScrollView>
@@ -55,11 +86,21 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 64,
     paddingBottom: 48,
-    backgroundColor: '#f7c893',
+    backgroundColor: '#fae2c8',
   },
+  back: { alignSelf: 'flex-start', paddingVertical: 8, marginBottom: 8 },
+  backText: { fontSize: 18, color: '#7A5C14' },
   movement: { fontSize: 16, color: '#7A5C14', marginBottom: 16 },
   title: { fontSize: 28, fontWeight: '600', marginBottom: 4 },
   artist: { fontSize: 16, color: '#6B6557', marginBottom: 16 },
   body: { fontSize: 16, lineHeight: 24, marginBottom: 12 },
+  subtitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#7A5C14',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: 6,
+  },
   sections: { marginTop: 16 },
 });

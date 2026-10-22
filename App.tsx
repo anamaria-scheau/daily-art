@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import { TimelineScreen } from './src/screens/TimelineScreen';
+import { TimelineStack } from './src/navigation/TimelineStack';
 import {
   CalendarScreen,
   FavoritesScreen,
@@ -23,7 +23,7 @@ export default function App() {
       >
         <Tab.Screen
           name="Chronological"
-          component={TimelineScreen}
+          component={TimelineStack}
           options={{
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="time-outline" color={color} size={size} />
