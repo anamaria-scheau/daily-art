@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Accordion } from '../components/Accordion';
@@ -5,6 +6,7 @@ import { ZoomableImage } from '../components/ZoomableImage';
 import movementsData from '../data/movements.json';
 import { images } from '../data/images';
 import { TimelineStackParamList } from '../navigation/types';
+import { useProgress } from '../state/ProgressContext';
 import { Movement } from '../types/movement';
 
 const movements = movementsData as Movement[];
@@ -23,15 +25,30 @@ function Paragraphs({ items }: { items: string[] }) {
   );
 }
 
-export function EpochScreen({ route, navigation }: Props) {
-  const movement = movements.find((m) => m.id === route.params.movementId);
-  if (!movement) return null;
-  const artwork = movement.artworks[0];
+type ContentProps = {
+  movement: Movement;
+  onBack: () => void;
+};
+
+function EpochContent({ movement, onBack }: ContentProps) {
+  const { pending, discoveredToday, discoverToday } = useProgress();
+  const isPending = !discoveredToday && pending.movement.id === movement.id;
+
+  // Freeze the artwork on first render: discovering it moves the progress
+  // forward, and the screen must not switch to another artwork meanwhile.
+  const [artwork] = useState(() =>
+    isPending ? pending.artwork : movement.artworks[0]
+  );
+
+  useEffect(() => {
+    if (isPending) discoverToday();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Pressable
-        onPress={() => navigation.goBack()}
+        onPress={onBack}
         accessibilityRole="button"
         accessibilityLabel="Back to timeline"
         style={styles.back}
@@ -81,12 +98,20 @@ export function EpochScreen({ route, navigation }: Props) {
   );
 }
 
+export function EpochScreen({ route, navigation }: Props) {
+  const movement = movements.find((m) => m.id === route.params.movementId);
+  if (!movement) return null;
+  return (
+    <EpochContent movement={movement} onBack={() => navigation.goBack()} />
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     padding: 24,
     paddingTop: 64,
     paddingBottom: 48,
-    backgroundColor: '#fae9d7',
+    backgroundColor: '#f1bc7e',
   },
   back: { alignSelf: 'flex-start', paddingVertical: 8, marginBottom: 8 },
   backText: { fontSize: 18, color: '#7A5C14' },

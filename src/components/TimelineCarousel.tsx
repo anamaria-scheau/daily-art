@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Dimensions,
   Image,
@@ -11,12 +11,15 @@ import {
   View,
 } from 'react-native';
 import Animated, {
+  Easing,
   Extrapolation,
   SharedValue,
   interpolate,
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
+  withRepeat,
+  withTiming,
 } from 'react-native-reanimated';
 import { images } from '../data/images';
 import { indexFromOffset } from '../logic/timeline';
@@ -42,11 +45,46 @@ function computeLayout(height: number): Layout {
   return { height, axisY, medallion, stem: maxHalf - medallion };
 }
 
+type HaloProps = {
+  size: number;
+  left: number;
+  top: number;
+};
+
+function Halo({ size, left, top }: HaloProps) {
+  const pulse = useSharedValue(0);
+
+  useEffect(() => {
+    pulse.value = withRepeat(
+      withTiming(1, { duration: 1600, easing: Easing.out(Easing.quad) }),
+      -1,
+      false
+    );
+  }, [pulse]);
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    opacity: 0.85 * (1 - pulse.value),
+    transform: [{ scale: 1 + 0.4 * pulse.value }],
+  }));
+
+  return (
+    <Animated.View
+      pointerEvents="none"
+      style={[
+        styles.halo,
+        { width: size, height: size, borderRadius: size / 2, left, top },
+        animatedStyle,
+      ]}
+    />
+  );
+}
+
 type ItemProps = {
   movement: Movement;
   index: number;
   scrollX: SharedValue<number>;
   layout: Layout;
+  hasHalo: boolean;
   onPress: () => void;
 };
 
@@ -55,11 +93,14 @@ function TimelineItem({
   index,
   scrollX,
   layout,
+  hasHalo,
   onPress,
 }: ItemProps) {
   const above = index % 2 === 0;
   const cover = images[movement.artworks[0].imageKey];
   const { axisY, medallion, stem } = layout;
+  const medallionLeft = (ITEM_WIDTH - medallion) / 2;
+  const medallionTop = above ? axisY - stem - medallion : axisY + stem;
 
   const animatedStyle = useAnimatedStyle(() => {
     const input = [
@@ -97,6 +138,9 @@ function TimelineItem({
           { height: stem, top: above ? axisY - stem : axisY },
         ]}
       />
+      {hasHalo && (
+        <Halo size={medallion} left={medallionLeft} top={medallionTop} />
+      )}
       <Pressable
         onPress={onPress}
         accessibilityRole="button"
@@ -107,8 +151,8 @@ function TimelineItem({
             width: medallion,
             height: medallion,
             borderRadius: medallion / 2,
-            left: (ITEM_WIDTH - medallion) / 2,
-            top: above ? axisY - stem - medallion : axisY + stem,
+            left: medallionLeft,
+            top: medallionTop,
           },
         ]}
       >
@@ -134,12 +178,14 @@ function TimelineItem({
 
 type Props = {
   movements: Movement[];
+  haloIndex: number;
   onActiveChange: (index: number) => void;
   onSelect: (movement: Movement) => void;
 };
 
 export function TimelineCarousel({
   movements,
+  haloIndex,
   onActiveChange,
   onSelect,
 }: Props) {
@@ -176,6 +222,7 @@ export function TimelineCarousel({
           <Animated.FlatList
             data={movements}
             keyExtractor={(m) => m.id}
+            extraData={haloIndex}
             horizontal
             showsHorizontalScrollIndicator={false}
             snapToInterval={ITEM_WIDTH}
@@ -190,6 +237,7 @@ export function TimelineCarousel({
                 index={index}
                 scrollX={scrollX}
                 layout={layout}
+                hasHalo={index === haloIndex}
                 onPress={() => onSelect(item)}
               />
             )}
@@ -214,6 +262,11 @@ const styles = StyleSheet.create({
     left: ITEM_WIDTH / 2 - 1,
     width: 2,
     backgroundColor: '#CFC6B2',
+  },
+  halo: {
+    position: 'absolute',
+    borderWidth: 4,
+    borderColor: '#C9A24B',
   },
   medallion: {
     position: 'absolute',

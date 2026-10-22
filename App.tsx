@@ -8,57 +8,60 @@ import {
   FavoritesScreen,
   MuseumScreen,
 } from './src/screens/placeholders';
+import { ProgressProvider } from './src/state/ProgressContext';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: '#7A5C14',
-          tabBarInactiveTintColor: '#6B6557',
-        }}
-      >
-        <Tab.Screen
-          name="Chronological"
-          component={TimelineStack}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="time-outline" color={color} size={size} />
-            ),
+    <ProgressProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={{
+            headerShown: false,
+            tabBarActiveTintColor: '#7A5C14',
+            tabBarInactiveTintColor: '#6B6557',
           }}
-        />
-        <Tab.Screen
-          name="Calendar"
-          component={CalendarScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="calendar-outline" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Favorites"
-          component={FavoritesScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="heart-outline" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Museum"
-          component={MuseumScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="business-outline" color={color} size={size} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-      <StatusBar style="auto" />
-    </NavigationContainer>
+        >
+          <Tab.Screen
+            name="Chronological"
+            component={TimelineStack}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="time-outline" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Calendar"
+            component={CalendarScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="calendar-outline" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Favorites"
+            component={FavoritesScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="heart-outline" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Museum"
+            component={MuseumScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="business-outline" color={color} size={size} />
+              ),
+            }}
+          />
+        </Tab.Navigator>
+        <StatusBar style="auto" />
+      </NavigationContainer>
+    </ProgressProvider>
   );
 }

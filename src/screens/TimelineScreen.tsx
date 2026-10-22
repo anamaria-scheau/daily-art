@@ -4,6 +4,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { TimelineCarousel } from '../components/TimelineCarousel';
 import movementsData from '../data/movements.json';
 import { TimelineStackParamList } from '../navigation/types';
+import { useProgress } from '../state/ProgressContext';
 import { Movement } from '../types/movement';
 
 const movements = movementsData as Movement[];
@@ -12,7 +13,14 @@ type Props = NativeStackScreenProps<TimelineStackParamList, 'Timeline'>;
 
 export function TimelineScreen({ navigation }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { loaded, discoveredToday, pending } = useProgress();
   const active = movements[activeIndex];
+
+  const haloIndex =
+    loaded && !discoveredToday
+      ? movements.findIndex((m) => m.id === pending.movement.id)
+      : -1;
+  const activeHasHalo = haloIndex === activeIndex;
 
   return (
     <View style={styles.container}>
@@ -21,6 +29,7 @@ export function TimelineScreen({ navigation }: Props) {
       <View style={styles.timeline}>
         <TimelineCarousel
           movements={movements}
+          haloIndex={haloIndex}
           onActiveChange={setActiveIndex}
           onSelect={(movement) =>
             navigation.navigate('Epoch', { movementId: movement.id })
@@ -31,6 +40,9 @@ export function TimelineScreen({ navigation }: Props) {
       <ScrollView style={styles.info} contentContainerStyle={styles.infoContent}>
         <Text style={styles.name}>{active.name}</Text>
         <Text style={styles.years}>{active.yearRange}</Text>
+        {activeHasHalo && (
+          <Text style={styles.today}>Today's discovery is waiting ✦</Text>
+        )}
         <Text style={styles.description}>{active.description}</Text>
       </ScrollView>
     </View>
@@ -51,5 +63,11 @@ const styles = StyleSheet.create({
   infoContent: { paddingHorizontal: 24, paddingTop: 8, paddingBottom: 16 },
   name: { fontSize: 22, fontWeight: '600', color: '#211D17' },
   years: { fontSize: 14, color: '#7A5C14', marginBottom: 8 },
+  today: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#7A5C14',
+    marginBottom: 8,
+  },
   description: { fontSize: 16, lineHeight: 24, color: '#4A4332' },
 });
