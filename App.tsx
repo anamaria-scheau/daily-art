@@ -2,12 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { CalendarStack } from './src/navigation/CalendarStack';
 import { TimelineStack } from './src/navigation/TimelineStack';
-import {
-  CalendarScreen,
-  FavoritesScreen,
-  MuseumScreen,
-} from './src/screens/placeholders';
+import { FavoritesScreen, MuseumScreen } from './src/screens/placeholders';
 import { ProgressProvider } from './src/state/ProgressContext';
 
 const Tab = createBottomTabNavigator();
@@ -34,7 +31,7 @@ export default function App() {
           />
           <Tab.Screen
             name="Calendar"
-            component={CalendarScreen}
+            component={CalendarStack}
             options={{
               tabBarIcon: ({ color, size }) => (
                 <Ionicons name="calendar-outline" color={color} size={size} />
