@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Accordion } from './src/components/Accordion';
 import movements from './src/data/movements.json';
 import { images } from './src/data/images';
@@ -16,8 +16,8 @@ export default function App() {
       <Text style={styles.movement}>{movement.name}</Text>
       <ZoomableImage
         source={images[artwork.imageKey]}
-        style={styles.image}
-        resizeMode="contain"
+        // style={styles.image}
+        // resizeMode="contain"
       />
       <Text style={styles.title}>{artwork.title}</Text>
       <Text style={styles.artist}>
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1bc7e',
   },
   movement: { fontSize: 16, color: '#7A5C14', marginBottom: 16 },
-  image: { width: '100%', height: 420, marginBottom: 16 },
   title: { fontSize: 28, fontWeight: '600', marginBottom: 4 },
   artist: { fontSize: 16, color: '#6B6557', marginBottom: 16 },
   body: { fontSize: 16, lineHeight: 24, marginBottom: 12 },
