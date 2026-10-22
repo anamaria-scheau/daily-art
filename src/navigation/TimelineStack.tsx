@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { ArtworkScreen } from '../screens/ArtworkScreen';
 import { EpochScreen } from '../screens/EpochScreen';
 import { TimelineScreen } from '../screens/TimelineScreen';
 import { TimelineStackParamList } from './types';
@@ -12,6 +13,11 @@ export function TimelineStack() {
       <Stack.Screen
         name="Epoch"
         component={EpochScreen}
+        options={{ animation: 'fade' }}
+      />
+      <Stack.Screen
+        name="Artwork"
+        component={ArtworkScreen}
         options={{ animation: 'fade' }}
       />
     </Stack.Navigator>
