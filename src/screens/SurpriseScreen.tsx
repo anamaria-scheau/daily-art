@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   ActivityIndicator,
   Image,
@@ -8,6 +9,41 @@ import {
   View,
 } from 'react-native';
 import { useRandomArtwork } from '../hooks/useRandomArtwork';
+
+type ImageStatus = 'loading' | 'loaded' | 'failed';
+
+function ArtworkImage({ uri, label }: { uri: string; label: string }) {
+  const [status, setStatus] = useState<ImageStatus>('loading');
+
+  return (
+    <View style={styles.frame}>
+      <Image
+        source={{
+          uri,
+          headers: { 'AIC-User-Agent': 'daily-art-learning-project' },
+        }}
+        style={styles.image}
+        resizeMode="contain"
+        accessibilityLabel={label}
+        onLoad={() => setStatus('loaded')}
+        onError={(event) => {
+          console.log('Image failed to load:', uri, event.nativeEvent.error);
+          setStatus('failed');
+        }}
+      />
+      {status === 'loading' && (
+        <View style={styles.overlay}>
+          <ActivityIndicator color="#7A5C14" />
+        </View>
+      )}
+      {status === 'failed' && (
+        <View style={styles.overlay}>
+          <Text style={styles.hint}>The image could not be loaded.</Text>
+        </View>
+      )}
+    </View>
+  );
+}
 
 export function SurpriseScreen() {
   const { state, reload } = useRandomArtwork();
@@ -43,20 +79,19 @@ export function SurpriseScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.heading}>Surprise me</Text>
-      <View style={styles.frame}>
-        <Image
-          source={{ uri: artwork.imageUrl }}
-          style={styles.image}
-          resizeMode="contain"
-          accessibilityLabel={artwork.title}
-        />
-      </View>
+      <ArtworkImage
+        key={artwork.imageUrl}
+        uri={artwork.imageUrl}
+        label={artwork.title}
+      />
       <Text style={styles.title}>{artwork.title}</Text>
       <Text style={styles.artist}>
         {artwork.artist}
         {artwork.year ? `, ${artwork.year}` : ''}
       </Text>
-      {artwork.medium !== '' && <Text style={styles.medium}>{artwork.medium}</Text>}
+      {artwork.medium !== '' && (
+        <Text style={styles.medium}>{artwork.medium}</Text>
+      )}
       <Pressable
         onPress={reload}
         accessibilityRole="button"
@@ -96,6 +131,12 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   image: { width: '100%', height: '100%' },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+  },
   title: { fontSize: 24, fontWeight: '600', color: '#211D17', marginBottom: 4 },
   artist: { fontSize: 16, color: '#6B6557', marginBottom: 4 },
   medium: { fontSize: 14, color: '#6B6557', marginBottom: 16 },
