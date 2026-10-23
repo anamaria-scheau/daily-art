@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { CalendarStack } from './src/navigation/CalendarStack';
 import { FavoritesStack } from './src/navigation/FavoritesStack';
+import { MuseumStack } from './src/navigation/MuseumStack';
 import { TimelineStack } from './src/navigation/TimelineStack';
-import { MuseumScreen } from './src/screens/placeholders';
 import { SurpriseScreen } from './src/screens/SurpriseScreen';
 import { FavoritesProvider } from './src/state/FavoritesContext';
 import { ProgressProvider } from './src/state/ProgressContext';
@@ -62,7 +62,7 @@ export default function App() {
             />
             <Tab.Screen
               name="Museum"
-              component={MuseumScreen}
+              component={MuseumStack}
               options={{
                 tabBarIcon: ({ color, size }) => (
                   <Ionicons name="business-outline" color={color} size={size} />

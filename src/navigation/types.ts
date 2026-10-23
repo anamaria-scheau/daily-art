@@ -13,3 +13,9 @@ export type FavoritesStackParamList = {
   Favorites: undefined;
   Artwork: { artworkId: string };
 };
+
+export type MuseumStackParamList = {
+  Museum: undefined;
+  Room: { monthKey: string };
+  Artwork: { artworkId: string };
+};
